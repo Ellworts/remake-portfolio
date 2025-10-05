@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: "Archivo", sans-serif;
+  font-size: 68px;
+  font-weight: bold;
+}
+
+h2 {
+    font-family: "Archivo", sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+h3 {
+  font-family: "Archivo", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: "Archivo", sans-serif;
+  font-size: 24px;
+  font-weight: 600; // semibold
+  letter-spacing: 10%;
+}
+
+p {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 400; // regular
+  line-height: 26px;
+}
+
+h5 {
+  font-family: "Archivo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600; // semibold
+  line-height: 26px;
+  color: #ffa74f;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 21px;
+  border: 1px solid #ffa74f;
+  border-radius: 40px;
+  font-family: "Archivo", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffa74f;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.2s;
+  gap: 16px;
+
+  &:hover {
+    background: #ffa74f;
+    color: #122b28;
+  }
+  &:hover svg {
+    fill: #122b28;
+  }
+}
+
+.icon svg {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  color: #ffa74f;
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.btn-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}

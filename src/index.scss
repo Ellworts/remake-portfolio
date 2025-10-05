@@ -1,0 +1,30 @@
+body,
+html {
+  background-color: #122b28;
+  color: #e7ebee;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 40px 160px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Планшет */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 40px; /* Планшет: 40px верх/низ, 40px лево/право */
+  }
+}
+
+/* Мобильный */
+@media (max-width: 480px) {
+  .container {
+    padding: 40px 20px; /* Мобильный: 40px верх/низ, 20px лево/право */
+  }
+}
