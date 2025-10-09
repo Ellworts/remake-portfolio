@@ -75,9 +75,21 @@ p {
 
 .me-lol {
   position: absolute;
-  bottom: -40.5%;
-  opacity: 0.6;
-  transition: all 0.4s ease !important;
+  bottom: -43%;
+  opacity: 0.5;
+  transition: all 0.4s ease;
+
+  &::after {
+    content: "hmm...";
+    position: absolute;
+    left: 45%;
+    top: 0%;
+    transition: all 0.4s ease;
+  }
+  &:hover::after {
+    content: "hello!:)";
+    opacity: 1;
+  }
 
   &:hover {
     opacity: 1;
@@ -220,3 +232,34 @@ p {
 }
 
 // #endregion
+
+//#region media queries
+@media (max-width: 756px) {
+  .snap-wrapper {
+    scroll-snap-type: none;
+    overflow-y: visible;
+  }
+
+  .right-aside {
+    display: none;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-item, .grid-item-wide, .grid-icons {
+    min-height: 300px ;
+    aspect-ratio: 1/1;
+  }
+
+  .me-lol {
+  bottom: -44%;
+  transform: scale(0.8);
+
+  &:hover {
+    bottom: -30%;
+  }
+}
+}

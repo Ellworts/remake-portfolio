@@ -3,41 +3,37 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Archivo", sans-serif;
+  
 }
 h1 {
-  font-family: "Archivo", sans-serif;
   font-size: 68px;
   font-weight: bold;
 }
 
 h2 {
-    font-family: "Archivo", sans-serif;
     font-size: 4rem;
     font-weight: bold;
 }
 
 h3 {
-  font-family: "Archivo", sans-serif;
   font-size: 2rem;
   font-weight: bold;
 }
 
 h4 {
-  font-family: "Archivo", sans-serif;
   font-size: 24px;
   font-weight: 600; // semibold
   letter-spacing: 10%;
 }
 
 p {
-  font-family: "Archivo", sans-serif;
   font-size: 16px;
   font-weight: 400; // regular
   line-height: 26px;
 }
 
 h5 {
-  font-family: "Archivo", sans-serif;
   font-size: 1.2rem;
   font-weight: 600; // semibold
   line-height: 26px;
@@ -51,7 +47,6 @@ button {
   padding: 8px 21px;
   border: 1px solid #ffa74f;
   border-radius: 40px;
-  font-family: "Archivo", sans-serif;
   font-weight: bold;
   font-size: 24px;
   color: #ffa74f;

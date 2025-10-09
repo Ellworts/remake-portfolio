@@ -35,6 +35,35 @@ const Home: React.FC = () => {
       easing: "ease",
     });
   }, []);
+  // Массивы для иконок
+  const socialIcons = [
+    { Icon: TelegramIcon, delay: 300 },
+    { Icon: LinkedInIcon, delay: 400 },
+    { Icon: InstaIcon, delay: 500 },
+  ];
+  const gridSocialIcons = [InstaIcon, TelegramIcon, LinkedInIcon, GithubIcon];
+  const techStackIcons = [
+    HtmlIcon,
+    CssIcon,
+    JsIcon,
+    TsIcon,
+    ReactIcon,
+    VueIcon,
+    SassIcon,
+    TailwindIcon,
+    PhpIcon,
+  ];
+  const toolsIcons = [
+    EslintIcon,
+    FigmaIcon,
+    GitIcon,
+    GithubIcon2,
+    JestIcon,
+    NpmIcon,
+    VscodeIcon,
+    WebpackIcon,
+  ];
+
   return (
     <div className="snap-wrapper">
       <div className="hero container snap-section">
@@ -46,15 +75,16 @@ const Home: React.FC = () => {
             </h1>
           </span>
           <div className="buttons">
-            <span className="icon" data-aos="fade-up" data-aos-delay="300">
-              <TelegramIcon />
-            </span>
-            <span className="icon" data-aos="fade-up" data-aos-delay="400">
-              <LinkedInIcon />
-            </span>
-            <span className="icon" data-aos="fade-up" data-aos-delay="500">
-              <InstaIcon />
-            </span>
+            {socialIcons.map(({ Icon, delay }, idx) => (
+              <span
+                className="icon"
+                data-aos="fade-up"
+                data-aos-delay={delay}
+                key={idx}
+              >
+                <Icon />
+              </span>
+            ))}
           </div>
         </aside>
         <aside className="right-aside">
@@ -83,7 +113,7 @@ const Home: React.FC = () => {
             </span>
           </button>
         </aside>
-        <span className="me-lol" data-aos="fade-up" data-aos-delay="700">
+        <span className="me-lol">
           <img src={me} alt="mishapro" />
         </span>
       </div>
@@ -103,18 +133,11 @@ const Home: React.FC = () => {
             </div>
           </div>
           <div className="grid-icons">
-            <div className="grid-icon">
-              <InstaIcon />
-            </div>
-            <div className="grid-icon">
-              <TelegramIcon />
-            </div>
-            <div className="grid-icon">
-              <LinkedInIcon />
-            </div>
-            <div className="grid-icon">
-              <GithubIcon />
-            </div>
+            {gridSocialIcons.map((Icon, idx) => (
+              <div className="grid-icon" key={idx}>
+                <Icon />
+              </div>
+            ))}
           </div>
           <div className="grid-item-wide">
             <div className="text">
@@ -123,33 +146,11 @@ const Home: React.FC = () => {
           </div>
           <div className="grid-item tech-stack">
             <div className="tech-icons">
-              <div className="icon">
-                <HtmlIcon />
-              </div>
-              <div className="icon">
-                <CssIcon />
-              </div>
-              <div className="icon">
-                <JsIcon />
-              </div>
-              <div className="icon">
-                <TsIcon />
-              </div>
-              <div className="icon">
-                <ReactIcon />
-              </div>
-              <div className="icon">
-                <VueIcon />
-              </div>
-              <div className="icon">
-                <SassIcon />
-              </div>
-              <div className="icon">
-                <TailwindIcon />
-              </div>
-              <div className="icon">
-                <PhpIcon />
-              </div>
+              {techStackIcons.map((Icon, idx) => (
+                <div className="icon" key={idx}>
+                  <Icon />
+                </div>
+              ))}
             </div>
             <div className="text">
               <span>
@@ -169,30 +170,11 @@ const Home: React.FC = () => {
           </div>
           <div className="grid-item tech-stack">
             <div className="tech-icons">
-              <div className="icon">
-                <EslintIcon />
-              </div>
-              <div className="icon">
-                <FigmaIcon />
-              </div>
-              <div className="icon">
-                <GitIcon />
-              </div>
-              <div className="icon">
-                <GithubIcon2 />
-              </div>
-              <div className="icon">
-                <JestIcon />
-              </div>
-              <div className="icon">
-                <NpmIcon />
-              </div>
-              <div className="icon">
-                <VscodeIcon />
-              </div>
-              <div className="icon">
-                <WebpackIcon />
-              </div>
+              {toolsIcons.map((Icon, idx) => (
+                <div className="icon" key={idx}>
+                  <Icon />
+                </div>
+              ))}
             </div>
             <div className="text">
               <span>
